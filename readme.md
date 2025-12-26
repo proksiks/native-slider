@@ -349,4 +349,4 @@ Pull requests приветствуются! Для больших изменен
 
 ## Автор
 
-Ваше имя - [GitHub](https://github.com/yourusername)
+Vladimir Khliupnev - [GitHub](https://github.com/proksiks)
