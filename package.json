@@ -4,6 +4,14 @@
   "description": "Нативный TypeScript слайдер без зависимостей",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "files": [
     "lib",
     "README.md"
