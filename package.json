@@ -1,5 +1,5 @@
 {
-  "name": "@proksiks/native-slider",
+  "name": "@proksik/native-slider",
   "version": "0.0.1",
   "description": "Нативный TypeScript слайдер без зависимостей",
   "main": "lib/index.js",
