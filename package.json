@@ -1,0 +1,23 @@
+{
+  "name": "@proksiks/native-slider",
+  "version": "0.0.1",
+  "description": "Нативный TypeScript слайдер без зависимостей",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["slider", "typescript", "vanilla", "carousel"],
+  "author": "Vladimir Khliupnev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proksiks/native-slider.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
