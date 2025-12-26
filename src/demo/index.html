@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NativeSlider - Demo & Documentation</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>🎢 NativeSlider</h1>
+            <p>Lightweight native browser slider with zero dependencies</p>
+            <div class="badges">
+                <span class="badge">📦 Zero Dependencies</span>
+                <span class="badge">🚀 Performance First</span>
+                <span class="badge">📱 Mobile Ready</span>
+                <span class="badge">⚡ TypeScript</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="install">
+            <h2>📦 Installation</h2>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyToClipboard('npm install native-slider')">Copy</button>
+                <code>npm install native-slider</code>
+            </div>
+
+            <h2 style="margin-top: 30px;">🚀 Quick Start</h2>
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyToClipboard(quickStartCode)">Copy</button>
+                <pre>
+                    <code>
+                        import NativeSlider from 'native-slider';
+                        const slider = new NativeSlider({
+                          container: '.slider-wrapper',
+                          slidesSelector: '.slider',
+                          slideSelector: '.slide',
+                          prevButton: '.btn-prev',
+                          nextButton: '.btn-next',
+                          pagination: '.pagination',
+                          loop: true
+                        });
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Native Performance</h3>
+                <p>Uses browser's native scroll-snap for buttery smooth animations</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📦</div>
+                <h3>Zero Dependencies</h3>
+                <p>Pure TypeScript with no external libraries required</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⌨️</div>
+                <h3>Keyboard Navigation</h3>
+                <p>Full keyboard support with arrow keys</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📍</div>
+                <h3>Auto Pagination</h3>
+                <p>Automatically generated pagination bullets</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <h3>Loop Mode</h3>
+                <p>Infinite scrolling with seamless transitions</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Fully Customizable</h3>
+                <p>Complete control over styles and behavior</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📊 Basic Slider</h2>
+            <div class="slider-wrapper" id="basic-slider">
+                <div class="slider">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3>🎯 Slide 1</h3>
+                            <p>Smooth native scrolling with CSS scroll-snap</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3>⚡ Slide 2</h3>
+                            <p>Lightning-fast performance, zero dependencies</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3>🎨 Slide 3</h3>
+                            <p>Fully customizable with your own styles</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3>📱 Slide 4</h3>
+                            <p>Works perfectly on mobile and desktop</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <h3>🚀 Slide 5</h3>
+                            <p>Easy to integrate with any framework</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-btn" id="basic-prev">← Previous</button>
+                <button class="nav-btn" id="basic-next">Next →</button>
+            </div>
+            <div class="pagination" id="basic-pagination"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🖼️ Image Gallery Slider</h2>
+            <div class="slider-wrapper" id="image-slider">
+                <div class="slider">
+                    <div class="slide image-slide">
+                        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=600&fit=crop"
+                            alt="Mountain">
+                        <div class="image-caption">🏔️ Beautiful Mountains</div>
+                    </div>
+                    <div class="slide image-slide">
+                        <img src="https://images.unsplash.com/photo-1682687221038-404cb8830901?w=800&h=600&fit=crop"
+                            alt="Ocean">
+                        <div class="image-caption">🌊 Ocean Waves</div>
+                    </div>
+                    <div class="slide image-slide">
+                        <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=800&h=600&fit=crop"
+                            alt="Forest">
+                        <div class="image-caption">🌲 Forest Path</div>
+                    </div>
+                    <div class="slide image-slide">
+                        <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=800&h=600&fit=crop"
+                            alt="Desert">
+                        <div class="image-caption">🏜️ Desert Sunset</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-btn" id="image-prev">← Previous</button>
+                <button class="nav-btn" id="image-next">Next →</button>
+            </div>
+            <div class="pagination" id="image-pagination"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>💳 Card Slider</h2>
+            <div class="slider-wrapper" id="card-slider">
+                <div class="slider">
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">🎯</div>
+                            <h3>Feature One</h3>
+                            <p>IntersectionObserver API for detecting active slides automatically</p>
+                        </div>
+                    </div>
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">⚡</div>
+                            <h3>Feature Two</h3>
+                            <p>Keyboard navigation support with arrow keys for accessibility</p>
+                        </div>
+                    </div>
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">🔄</div>
+                            <h3>Feature Three</h3>
+                            <p>Loop mode for infinite scrolling through your content</p>
+                        </div>
+                    </div>
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">📱</div>
+                            <h3>Feature Four</h3>
+                            <p>Responsive design that works on all screen sizes</p>
+                        </div>
+                    </div>
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">🎨</div>
+                            <h3>Feature Five</h3>
+                            <p>Fully customizable styles and animations to match your brand</p>
+                        </div>
+                    </div>
+                    <div class="slide card-slide">
+                        <div class="card">
+                            <div class="card-icon">🚀</div>
+                            <h3>Feature Six</h3>
+                            <p>TypeScript support with full type definitions included</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-btn" id="card-prev">← Previous</button>
+                <button class="nav-btn" id="card-next">Next →</button>
+            </div>
+            <div class="pagination" id="card-pagination"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Made with ❤️ by developers, for developers</p>
+            <a href="https://github.com/yourusername/native-slider" class="github-link">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <script type="module">
+        import NativeSlider from './lib/index.min.js';
+
+        const quickStartCode = `
+            import NativeSlider from 'native-slider';
+
+            const slider = new NativeSlider({
+              container: '.slider-wrapper',
+              slidesSelector: '.slider',
+              slideSelector: '.slide',
+              prevButton: '.btn-prev',
+              nextButton: '.btn-next',
+              pagination: '.pagination',
+              loop: true
+            });
+        `;
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new NativeSlider({
+                container: '#basic-slider',
+                slidesSelector: '.slider',
+                slideSelector: '.slide',
+                prevButton: '#basic-prev',
+                nextButton: '#basic-next',
+                pagination: '#basic-pagination',
+                loop: true
+            });
+
+            new NativeSlider({
+                container: '#image-slider',
+                slidesSelector: '.slider',
+                slideSelector: '.slide',
+                prevButton: '#image-prev',
+                nextButton: '#image-next',
+                pagination: '#image-pagination',
+                loop: true
+            });
+
+            new NativeSlider({
+                container: '#card-slider',
+                slidesSelector: '.slider',
+                slideSelector: '.slide',
+                prevButton: '#card-prev',
+                nextButton: '#card-next',
+                pagination: '#card-pagination',
+                loop: true
+            });
+        });
+    </script>
+</body>
+
+</html>
